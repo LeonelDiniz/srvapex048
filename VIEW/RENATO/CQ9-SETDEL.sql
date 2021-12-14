@@ -1,0 +1,16 @@
+SELECT * FROM CQ9010
+WHERE d_e_l_e_t_ = ' '
+AND CQ9_DATA >= '20200101'
+AND CQ9_LP = 'S'
+AND CQ9_DTLP = '20201231';
+
+
+
+--UPDATE CQ9010
+SET d_e_l_e_t_ = '*'
+WHERE d_e_l_e_t_ = ' '
+AND CQ9_DATA >= '20200101'
+AND CQ9_LP = 'S'
+AND CQ9_DTLP = '20201231';
+
+commit

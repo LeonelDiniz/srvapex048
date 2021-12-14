@@ -1,0 +1,13 @@
+select ZZ3_CONTRA, CN9_NUMERO,cn9_xtpmdl, ZZM_DESCRI
+from zz3010
+LEFT join cn9010
+ON SUBSTR(ZZ3_CONTRA, 0,15)= CN9_NUMERO
+OR CN9_NUMERO = ' '
+
+LEFT JOIN ZZM010
+ON ZZM_CODIGO = cn9_xtpmdl
+--OR cn9_xtpmdl = ' '
+
+
+
+

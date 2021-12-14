@@ -1,0 +1,36 @@
+SELECT A2_COD
+FROM CN9010, SA2010
+WHERE CN9_XDESCR = A2_NOME
+
+
+SELECT ZZ3_FORNEC
+FROM ZZ3010
+
+
+SELECT  distinct ZZ3_FORNEC AS FORNEC, cn9_xtpmdl AS MODALI
+FROM CN9010,ZZ3010
+WHERE ZZ3_FORNEC IN (SELECT A2_COD
+FROM CN9010, SA2010
+WHERE CN9_XDESCR = A2_NOME and sa2010.d_e_l_e_t_ = ' '  AND cn9010.d_e_l_e_t_ = ' ')
+AND ZZ3010.d_e_l_e_t_ = ' '
+AND cn9010.d_e_l_e_t_ = ' '
+order by zz3_fornec
+
+
+DROP VIEW VW_FORNEC_CN9
+
+CREATE VIEW VW_FORNEC_CN9
+
+AS 
+
+SELECT  distinct ZZ3_FORNEC AS FORNEC, cn9_xtpmdl AS MODALI
+FROM CN9010,ZZ3010
+WHERE ZZ3_FORNEC IN (SELECT A2_COD
+FROM CN9010, SA2010
+WHERE CN9_XDESCR = A2_NOME and sa2010.d_e_l_e_t_ = ' '  AND cn9010.d_e_l_e_t_ = ' ')
+AND ZZ3010.d_e_l_e_t_ = ' '
+AND cn9010.d_e_l_e_t_ = ' '
+order by zz3_fornec
+
+
+
