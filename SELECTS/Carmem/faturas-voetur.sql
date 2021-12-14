@@ -1,10 +1,11 @@
+--FATURAS VOETUR
 select 
 zb_fatura Fatura
 ,zc_solicit OS
 --,zc_item Item
 ,zc_descri Viajante
-,zb_tpserv Serviço
-,zb_emissao Emissão
+,zb_tpserv Serviï¿½o
+,zb_emissao Emissï¿½o
 ,zb_vencto Vencimento
 ,zc_total VlrFatura
 ,zb_total VlrOS  
